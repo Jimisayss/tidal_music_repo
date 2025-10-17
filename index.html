@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiFi Music App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>HiFi Music</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search artists, albums, or songs...">
+            <button id="search-button">Search</button>
+        </div>
+        <nav>
+            <button id="search-artists">Artists</button>
+            <button id="search-albums">Albums</button>
+            <button id="search-songs">Songs</button>
+        </nav>
+    </header>
+    <main>
+        <section id="results-display">
+            <!-- Search results will be displayed here -->
+            <h2>Search Results</h2>
+            <div id="artist-results" class="result-category">
+                <h3>Artists</h3>
+                <div class="results-grid"></div>
+            </div>
+            <div id="album-results" class="result-category">
+                <h3>Albums</h3>
+                <div class="results-grid"></div>
+            </div>
+            <div id="song-results" class="result-category">
+                <h3>Songs</h3>
+                <div class="results-grid"></div>
+            </div>
+        </section>
+        <section id="detail-view" style="display: none;">
+            <!-- Detailed view of artist, album, or song -->
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
