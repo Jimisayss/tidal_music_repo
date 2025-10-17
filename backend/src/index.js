@@ -5,7 +5,7 @@ const rateLimit = require('express-rate-limit');
 const config = require('./config');
 const apiRoutes = require('./routes');
 
-const app = express();
+const app = express();\r\n\r\napp.set('trust proxy', true);
 
 const limiter = rateLimit({
   windowMs: config.rateLimitWindowMs,
@@ -41,4 +41,5 @@ app.use((err, req, res, next) => {
 app.listen(config.port, () => {
   console.log(`API server listening on port ${config.port}`);
 });
+
 
