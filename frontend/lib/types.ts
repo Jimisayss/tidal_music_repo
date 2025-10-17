@@ -43,16 +43,13 @@ export interface SearchResults {
   albums: AlbumSummary[];
 }
 
-export interface TrackDetail extends TrackSummary {
-  lyrics?: string;
-  albumId?: string;
-  streamUrl?: string;
-}
+export interface TrackDetail extends TrackSummary {\r\n  lyrics?: string;\r\n  streamUrl?: string;\r\n}
 
 export interface DownloadOptions {
   id: string;
   quality: AudioQuality;
   filename?: string;
 }
+
 
 
