@@ -1,12 +1,22 @@
-﻿{
-  "buildCommand": "npm install",
-  "startCommand": "npm run start",
-  "env": {
-    "PORT": { "type": "port" },
-    "TIDAL_API_BASE_URL": "https://tidal.401658.xyz",
-    "CACHE_TTL_MS": "60000",
-    "CACHE_MAX_ENTRIES": "500",
-    "RATE_LIMIT_WINDOW_MS": "60000",
-    "RATE_LIMIT_MAX": "80"
-  }
-}
+services:
+  - type: web
+    name: hifi-music-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm run start
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: TIDAL_API_BASE_URL
+        value: https://tidal.401658.xyz
+      - key: CACHE_TTL_MS
+        value: '60000'
+      - key: CACHE_MAX_ENTRIES
+        value: '500'
+      - key: RATE_LIMIT_WINDOW_MS
+        value: '60000'
+      - key: RATE_LIMIT_MAX
+        value: '80'

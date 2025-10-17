@@ -43,7 +43,10 @@ export interface SearchResults {
   albums: AlbumSummary[];
 }
 
-export interface TrackDetail extends TrackSummary {\r\n  lyrics?: string;\r\n  streamUrl?: string;\r\n}
+export interface TrackDetail extends TrackSummary {
+  lyrics?: string;
+  streamUrl?: string;
+}
 
 export interface DownloadOptions {
   id: string;
